@@ -6,6 +6,6 @@ function mostrar()
 {
 	let nombrePersona; //declaracion de variable 
 	nombrepersona = prompt ("¿cúal es tu nombre?")
-	alert(nombrepersonal);
+	alert(nombrepersona);
 }
 
