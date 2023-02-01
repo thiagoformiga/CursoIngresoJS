@@ -7,7 +7,7 @@ function mostrar()
 	let nombrePersona; //declaracion de variable 
 	let apellidopersona
 	nombrepersona = prompt ("¿cúal es tu nombre?")
-	apellidopersona = prompt ("¿cúal es tu apelldo?")
-	alert("su nombre es "+nombrepersona + "su apellido es "+apellidopersona);
+	apellidopersona = prompt ("¿cúal es tu apellido?")
+	alert("su nombre es "+nombrepersona + " su apellido es "+apellidopersona);
 }
 
