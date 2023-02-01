@@ -1,9 +1,26 @@
 /*
+thiago formiga
 Debemos lograr tomar el importe por ID.
 Transformarlo a entero (parseInt), luego
 mostrar el importe con un Descuento del 25 %
 en el cuadro de texto "RESULTADO"*/
 function mostrarAumento()
 {
-	alert("ok");
+	let sueldoUno;
+	let descuento;
+	let nuevoSueldo;
+	let sueldoDos;
+
+	
+	// para calcular el sueldo le sumo el porcenaje al sueldo original
+	
+	sueldoUno = document.getElementById("txtIdImporte").value;
+	
+	sueldoDos = parseInt (sueldoUno);
+
+	descuento = (sueldoDos * 25 / 100);
+
+	nuevoSueldo = (sueldoDos - descuento);
+	
+	 document.getElementById("txtIdResultado").value=nuevoSueldo;
 }
