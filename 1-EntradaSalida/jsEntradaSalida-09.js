@@ -10,7 +10,9 @@ function mostrarAumento()
 	let aumento;
 	let nuevoSueldo;
 	let sueldoDos;
+	let porcentaje;
 
+	porcentaje= 10;
 	
 	// para calcular el sueldo le sumo el porcenaje al sueldo original
 	
@@ -18,7 +20,7 @@ function mostrarAumento()
 	
 	sueldoDos = parseInt (sueldoUno);
 
-	aumento = (sueldoDos* 10 /100);
+	aumento = (sueldoDos* porcentaje / 100);
 
 	nuevoSueldo = (sueldoDos + aumento);
 	
