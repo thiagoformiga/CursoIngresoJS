@@ -56,8 +56,10 @@ function PrecioFinal ()
     let productoDos;
     let productoTres;
     let suma;
+    let IVA;
     let precioFinal;
 
+    
     productoUno= document.getElementById("txtIdPrecioUno").value;
     productoDos= document.getElementById("txtIdPrecioDos").value;
     productoTres= document.getElementById("txtIdPrecioTres").value;
@@ -67,10 +69,11 @@ function PrecioFinal ()
     productoTres= parseInt(productoTres);
 
     suma= (productoUno + productoDos + productoTres);
+    
+    IVA= suma * 21 /100;
 
-    precioFinal= "el precio final es de " + suma * (21 / 100);
+    precioFinal= suma + IVA;
 
-    alert(precioFinal)
-
+    alert("el precio final con IVA es de " + precioFinal);
 	
 }

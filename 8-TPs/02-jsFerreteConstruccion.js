@@ -6,13 +6,42 @@ C.	Para hacer un contrapiso de 1m x 1m se necesitan 2 bolsas de cemento y 3 de c
 
 function Rectangulo () 
 {
+    /*A.	 mostrar la cantidad de alambre a comprar  si se ingresara el largo y el ancho de un terreno rectangular y se debe alambra con tres hilos de alambre.
+    base del rectangulo *2base+*2largo
+    para 3hilos de alambrese tiene que hacer perimetro por 3*/
+    
+    let largo;
+    let ancho;
+    let perimetro;
+    let alambre;
+
+    largo= document.getElementById("txtIdLargo").value;
+    ancho=document.getElementById("txtIdAncho").value;
+
+    largo= parseFloat(largo);
+    ancho=parseFloat(ancho);
+
+    perimetro= largo * 2 + ancho *2;
+
+    alambre= perimetro*3;
+
+
+
+
 
 }
 function Circulo () 
 {
+    /*permietro de circulo es 2*pi*R */
+    let radio;
+    let perimetro;
+    let alambre;
 	
 }
 function Materiales () 
 {
+    /* 
+    area del rectangulo largo por ancho 
+    para sacar las bolsas de cemento multiplico metro cuadrado por cemento y luego cal*/
 	
 }
