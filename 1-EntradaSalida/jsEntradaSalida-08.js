@@ -18,22 +18,26 @@ function SacarResto()
 	mensaje= "el resto es  " + numDiviendo % numDivisor;
 
 	alert(mensaje);
-	
-}
+ }
 
-function SacarResto()
-
-/*Ejercicio 8.bis: Ingresar dos numeros por id Se pide: mostrar por alert: 
+ /*
+formigathiago
+Ejercicio 8.bis: Ingresar dos numeros por id Se pide: mostrar por alert: 
 a) La suma de los dos numeros
 b) El promedio de los numeros
 c) El resto de los numeros (el primero en modulo del segundo) */
 
-
+function SacarResto()
 {
 	let numeroUno;
 	let numeroDos;
 	let suma;
-	let mensaje;
+	let promedio;
+	let resto;
+	let mensajeUno;
+	let mensajeDos;
+	let mensajeTres;
+
 	
 	numeroUno= document.getElementById("txtIdNumeroDividendo").value;
 	numeroDos= document.getElementById("txtIdNumeroDivisor").value;
@@ -41,18 +45,15 @@ c) El resto de los numeros (el primero en modulo del segundo) */
 	numeroUno= parseInt(numeroUno);
 	numeroDos= parseInt(numeroDos);
 	
-	mensaje= "el resultado de la suma es " + suma;
+	suma = numeroUno + numeroDos;
 
-	alert(mensaje);
+	promedio= suma / 2;
 
-	promedio= suma / 2
+	resto= (numeroUno % numeroDos);
 
-	mensaje = "el promedio es " + promedio
+	mensajeUno= "el total de la suma es de " + suma + ", ";
+	mensajeDos= " el promedio es de " + promedio + " y";
+	mensajeTres= " el resto da " + resto;
 
-	modulo = numeroUno % numeroDos;
-
-	mensaje= ;
-
-
-
+	alert(mensajeUno + mensajeDos + mensajeTres);
 }
