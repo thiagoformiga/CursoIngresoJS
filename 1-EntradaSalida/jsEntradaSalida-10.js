@@ -45,9 +45,9 @@ function mostrarAumento()
 	
 	descuento= prompt("ingresar descuento");
 	
-	calculo= descuento / 100;
+	calculo= importe * descuento / 100;
 	
-	resultado= importe * calculo;
+	resultado= importe - calculo;
 
 	document.getElementById("txtIdResultado").value =resultado;
 
