@@ -12,5 +12,12 @@ function mostrar()
 		alert("sos adolescente");
 
 	}
+
+	//    v              f
+	/*if(!(edad < 13 || edad > 17))//11
+	{
+		alert("Es adolescente");
+	}*/
+	//lo mismo 
 }
 //FIN DE LA FUNCIÓN
