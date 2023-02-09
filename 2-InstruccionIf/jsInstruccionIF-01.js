@@ -26,15 +26,58 @@ hata 80km/h= lento
 hasta 100= buen ritmo
 hasta 120= ahi de la ley 
 mas = eso no se hace*/
+//formula: velocidad= distancia/tiempo
 function mostrar()
 {
-	let;
+	let distancia;
+	let tiempo;
+	let velocidad;
+	let mensaje;
 
+	distancia= document.getElementById("txtIdEdad").value;
+	distancia=parseFloat(distancia);
+	tiempo=prompt("¿cuantas horas tardaste?");
+	tiempo=parseFloat(tiempo)
 
+	velocidad= distancia/tiempo
+
+	if(velocidad <= 60 ){
+		mensaje="muy lento";
+	}
+	else if(velocidad<= 80){
+		mensaje="lento";
+	}
+	else if (velocidad <= 100){
+		mensaje="es un buen ritmo";
+	}
+	else if(velocidad <= 120){
+		mensaje=" ahi de la ley";
+	}
+	else if(velocidad > 120){
+		mensaje="eso no se hace";
+	}
+
+	alert(mensaje);
 
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -45,43 +88,53 @@ Ejercicio 1 bis bis:
 con if
 ingresar el nombre y los datos requeridos para calcular el IMC , 
 e informar a la persona si es:
-Bajo peso <18.5
+Bajo IMC <18.5
 Peso normal 18,5-24.9
 Preobesidad 25-26.9
 Obesidad I 27-29.9
 Obesidad II 30-34.9
 Obesidad III >40
 function mostrar()
-{let peso
+{
+
+	let peso;
+	let altura;
+	let IMC;
+	let mensaje;
+
 
 peso= document.getElementById("txtIdEdad").value;
 peso= parseFloat(peso);
+altura= prompt("¿cual es tu altura?");
+altura= parseFloat(altura);
 
-if(peso < 18.5)
-{
-	mensaje= "tienes un bajo peso.";
+IMC= peso / (altura * altura);
 
-}
-else if (peso>= 18.5 && peso <= 24.9)
+if(IMC < 18.5)
 {
-	mensaje= "tienes un peso normal.";
-}
-else if(peso >= 25 && peso <= 26.9)
-{
-	mensaje= "tienes preobesidad.";
-}
-else if(peso >= 27 && peso <= 29.9 )
-{
-	mensaje="tienes obesidad I.";
+	mensaje= "tu imc es de "+IMC + " tienes un bajo peso.";
 
 }
-else if(peso >= 30 && peso <=34.9)
+else if (IMC>= 18.5 && IMC <= 24.9)
 {
-	mensaje= "tienes obesidad II.";
+	mensaje= "tu imc es de "+IMC +" tienes un IMC normal.";
 }
-else if(peso >= 35 || peso >= 40)
+else if(IMC >= 25 && IMC <= 26.9)
 {
-	mensaje="tienes obesidad III.";
+	mensaje="tu imc es de "+ IMC+" tienes preobesidad.";
+}
+else if(IMC >= 27 && IMC <= 29.9 )
+{
+	mensaje="tu imc es de "+IMC+ " tienes obesidad I.";
+
+}
+else if(IMC >= 30 && IMC <=34.9)
+{
+	mensaje= "tu imc es de "+ IMC+" tienes obesidad II.";
+}
+else if(IMC >= 35 || IMC >= 40)
+{
+	mensaje="tu imc es de "+IMC+" tienes obesidad III.";
 	
 }
 alert(mensaje);
