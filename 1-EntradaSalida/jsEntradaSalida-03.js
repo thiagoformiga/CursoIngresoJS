@@ -15,6 +15,7 @@ function mostrar()
 
 
 }
+//3 bis
 	function mostrar()
 {
 	let Producto;

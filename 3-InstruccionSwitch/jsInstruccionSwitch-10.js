@@ -1,4 +1,5 @@
-/*una agencia de viajes nos piden informar si hacemos viajes a lugares según la estación del año estemos, 
+/*formigathiago
+una agencia de viajes nos piden informar si hacemos viajes a lugares según la estación del año estemos, 
 informar si "Se viaja" o "No se viaja" a ese lugar
 
 en Invierno: Solo Bariloche informa "se viaja" los demas destinos "No se viaja"
@@ -29,6 +30,8 @@ function mostrar()
 					mensaje="no se viaja";
 					break;	
 			}
+			break;
+		
 		case	"Verano":
 			switch(destinoIngresado){
 				case	"Mar del plata":
@@ -40,6 +43,7 @@ function mostrar()
 					mensaje="no se viaja";
 					break;			
 			}
+			break;
 		case	"Otoño":
 			switch(destinoIngresado){
 				case	"Mar del plata":
@@ -49,6 +53,19 @@ function mostrar()
 					mensaje="se viaja";
 					break;			
 				}
+			break;
+		case	"Primavera":
+			switch(destinoIngresado){
+				case	"Bariloche":
+					mensaje= "se viaja";
+					break;
+				case	"Cataratas":
+				case	"Cordoba":
+				case	"Mar del plata":
+					mensaje="no se viaja";
+					break;
+			}
+			break;
 
 
 	}
