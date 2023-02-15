@@ -24,7 +24,7 @@ function mostrar()
 			mensaje="tiene 31 días";
 			break;
 
-	}
+	}//fin de switch
 
 	alert(mensaje)
 

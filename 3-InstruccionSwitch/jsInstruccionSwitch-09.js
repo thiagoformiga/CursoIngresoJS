@@ -22,46 +22,46 @@ function mostrar()
 	destino= document.getElementById("txtIdDestino").value;
 
 	switch(estacion){
-		case	"Invierno":
+		case "Invierno":
 			switch(destino){
-				case	"Bariloche":
+				case "Bariloche":
 					porcentaje = 20;
 					break;
-				case	"Cordoba":
-				case	"Cataratas":
+				case "Cordoba":
+				case "Cataratas":
 					porcentaje = -10;
 					break;
-				case	"Mar del plata":
+				case "Mar del plata":
 					porcentaje = -20;
 					break;
 				
 				}
 				break;
 			
-		case	"Verano":
+		case "Verano":
 			switch(destino){
 				case	"Bariloche":
 					porcentaje = -20;
 					break;
-				case	"Cordoba":
-				case	"Cataratas":
+				case "Cordoba":
+				case "Cataratas":
 					porcentaje = 10;
 					break;
-				case	"Mar del plata":
+				case "Mar del plata":
 					porcentaje = 20;
 					break;
 				
 			}
 			break;
-		case	"Otoño":
-		case	"Primavera":
+		case "Otoño":
+		case "Primavera":
 			switch(destino){
-				case	"Bariloche":
-				case	"Cataratas":
-				case	"Mar del plata":
+				case "Bariloche":
+				case "Cataratas":
+				case "Mar del plata":
 					porcentaje = 10;
 					break;
-				case	"Cordoba":
+				case "Cordoba":
 					porcentaje = 0;
 					break;
 			}
@@ -71,7 +71,7 @@ function mostrar()
 
 	precioFinal = precioBase + (precioBase * porcentaje/100);
 
-	alert("el prescio final es de $ " + precioFinal);
+	alert("el precio final es de $ " + precioFinal);
 
 
 

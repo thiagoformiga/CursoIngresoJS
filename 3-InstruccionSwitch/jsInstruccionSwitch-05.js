@@ -5,6 +5,7 @@ si está entre las 7 y las 11 : "Es de mañana.".*/
 function mostrar()
 {
 	let hora;
+	let mensaje;
 
 	hora= document.getElementById("txtIdHora").value;
 	hora= parseFloat(hora)
@@ -16,10 +17,6 @@ function mostrar()
 		case	10:
 		case	11:
 			mensaje="Es de mañana.";
-			break;
-		
-		default:
-			mensaje=".";
 			break;
 		
 		

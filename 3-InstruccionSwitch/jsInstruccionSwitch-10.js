@@ -46,10 +46,7 @@ function mostrar()
 			break;
 		case	"Otoño":
 			switch(destinoIngresado){
-				case	"Mar del plata":
-				case	"Cataratas"	:	
-				case	"Bariloche":
-				case	"Cordoba":
+				default:
 					mensaje="se viaja";
 					break;			
 				}

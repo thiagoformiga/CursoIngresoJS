@@ -3,27 +3,23 @@ Al seleccionar un destino informar si hace FRIO o CALOR en ese destino */
 function mostrar()
 {
 	let destinoIngresado;
+	let mensaje;
 	
 	destinoIngresado= document.getElementById("txtIdDestino").value;
 	
 
 	switch(destinoIngresado){
-		case	"Bariloche":
-			mensaje="en este lugar hace Frio";
+		case "Bariloche":
+		case "Ushuaia":
+			mensaje="En este lugar hace Frio";
 			break;
 
-		case	"Cataratas":
-			mensaje="en este lugar hace Calor";
+		case "Cataratas":
+		case "Mar del plata":
+			mensaje="En este lugar hace Calor";
 			break;
 
-		case	"Mar del plata":
-			mensaje="en este lugar hace Calor";
-			break;
-			
-		case	"Ushuaia":
-			mensaje="en este lugar hace Frio";
-			break;
-						
+		
 	}
 
 alert(mensaje);
