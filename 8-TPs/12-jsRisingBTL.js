@@ -1,4 +1,6 @@
-/*RISING BTL. Empresa dedicada a la toma de datos para realizar estadísticas y censos nos pide realizar una carga de datos validada e ingresada por ventanas emergentes solamente (para evitar hacking y cargas maliciosas) y luego asignarla a cuadros de textos. 
+/*RISING BTL. Empresa dedicada a la toma de datos para realizar estadísticas y censos nos pide realizar una carga 
+de datos validada e ingresada por ventanas emergentes solamente (para evitar hacking y cargas maliciosas) y 
+luego asignarla a cuadros de textos. 
 12.   Los datos requeridos son los siguientes:
 A.	Edad, entre 18 y 90 años inclusive.
 B.	Sexo, “M” para masculino y “F” para femenino
@@ -10,10 +12,34 @@ F.	Nacionalidad, “A” para argentinos, “E” para extranjeros, “N” para
 function ComenzarIngreso () 
 {
  	//definicion de variables
- 	var edadIngresada;
- 	var sexoIngresado;
- 	var estadoCivilIngresado;
+ 	let  edadIngresada;
+ 	let sexoIngresado;
+ 	let estadoCivilIngresado;
+	let mensaje
+	
+	
+	edadIngresada= 0;
 
+	
+	sexoIngresado= prompt("ingrese su sexo (“m” para masculino y “f” para femenino)");
 
+	while(isNaN(edadIngresada) || edadIngresada < 18 || edadIngresada > 90)
+	{		
+		edadIngresada= parseInt(prompt("ERROR, ingresa una edad valida (entre '18 y 90' años)"));
+		
+		if(sexoIngresado == "m" || sexoIngresado == "f")
+		{
+			mensaje= "su sexo es " + sexoIngresado;
 
+		}else
+		{
+			mensaje= "Error"
+			sexoIngresado= prompt("ingrese su sexo (“m” para masculino y “f” para femenino)");
+		}
+		
+	}
+
+	document.getElementById("txtIdEdad").value=edadIngresada;
+	document.getElementById("txtIdSexo").value=mensaje
+ 
 }

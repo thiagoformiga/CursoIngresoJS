@@ -13,8 +13,8 @@ hasta que el usuario quiera, mostrar:
 function mostrar()
 {
 	let numeroIngresado;
-	let sumaNegativos;
-	let sumaPositivos;
+	let sumaNegativos;// o acumuladores
+	let sumaPositivos;//o acumuladores
 	let ContadorPositivos;
 	let contadorNegativos;
 	let ContadorCeros;
@@ -23,6 +23,7 @@ function mostrar()
 	let PromedioNegativos;
 	let Diferencia;
 	let respuesta;
+
 
 	ContadorPositivos= 0;
 	contadorNegativos= 0; 
