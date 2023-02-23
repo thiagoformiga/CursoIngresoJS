@@ -4,17 +4,35 @@ function mostrar()
 {
 	let numeroIngresado;
 	let i;
-	let contadorDePrimos;
+	let contadorDeDivisores;
 
-	contadorDePrimos=0;
+	contadorDeDivisores=0;
 	numeroIngresado=parseInt(prompt("ingresa un numero"));
 
-	for(i=0;	i<=numeroIngresado;	i=i+2)
-	{		
-		contadorDePrimos= contadorDePrimos + 1;
-		console.log(i);
-	}
-	
-console.log("la cantidad de numeros primos es de: " + contadorDePrimos)
+	/*for(i=1;	i<=numeroIngresado;	i++)
+	{
+		if(numeroIngresado % i==0)
+		{
+			contadorDeDivisores= contadorDeDivisores + 1
+			console.log(i);
+		}
 
+	}
+	if(contadorDeDivisores == 2)
+	{
+		console.log( numeroIngresado + " es primo");
+	}
+	else
+	{
+		console.log(numeroIngresado + " no es primo");
+	}*/
+
+	for(i=2;	i<numeroIngresado;	i++)
+	{
+		if(numeroIngresado% i ==0)
+		{
+			console.log(numeroIngresado + " es primo")
+			break;
+		}
+	}
 }//FIN DE LA FUNCIÓN

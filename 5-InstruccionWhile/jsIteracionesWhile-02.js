@@ -57,13 +57,13 @@ mayores que 10 y menores 20
 function mostrar()
 {
 	let numeroIngresado;
-	let contadorDeMayores;
-	let sumaDeMayores;
+	let contador;
+	let acumulador;
 	let respuesta;
 	let promedio;
 
-	contadorDeMayores= 0;
-	sumaDeMayores= 0;
+	contador= 0;
+	acumulador= 0;
 	respuesta= "si";
 
 	while(respuesta== "si")
@@ -72,19 +72,20 @@ function mostrar()
 		numeroIngresado= parseInt(numeroIngresado);
 		while(isNaN(numeroIngresado))
 		{
-			numeroIngresado= prompt("error, ingresa un numero valido");
+			numeroIngresado= prompt("error, ingresa un numero valido(entre 10 y 20)");
 			numeroIngresado= parseInt(numeroIngresado);
 		}
 		if(numeroIngresado > 9 && numeroIngresado < 21)
 		{
-			sumaDeMayores= sumaDeMayores + numeroIngresado;
-			contadorDeMayores= contadorDeMayores + 1;	
+			acumulador= acumulador + numeroIngresado;
+			contador= contador + 1;	
 		}
-		respuesta= prompt("desea continuar? 'si/no' ");
+		respuesta= prompt("desea continuar? 'si/no'");
 	}
-	promedio= sumaDeMayores/ contadorDeMayores;
 
-	document.write("la cantidad de numeros que se encuentran entre 10 y 20 (incluidos) es de: " + contadorDeMayores + "<br>");
+	promedio= acumulador/ contador;
+
+	document.write("la cantidad de numeros que se encuentran entre 10 y 20 (incluidos) es de: " + contador + "<br>");
 	document.write("el promedio de los numeros que se encuentran entre 10 y 20 (incluidos) es de: " + promedio + "<br>");
 
 }

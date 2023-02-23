@@ -9,5 +9,18 @@ e.	Se pedirán un número positivo y se mostrará la cantidad de números Primos
 */
 function ComenzarIngreso () 
 {
- 	
+ 	let numeroingresado;
+    let i;
+
+    for(i=0;    i< numeroingresado;  i++)
+    {
+        numeroingresado= parseInt(document.getElementById("txtIdNumero").value);
+        while(isNaN(numeroingresado) || numeroingresado > -1)
+        {
+            numeroingresado= prompt("Error, ingresa un numero positivo");
+        }
+
+
+    }
+    console.log(numeroingresado)
 }
