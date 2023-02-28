@@ -7,7 +7,7 @@ b) Cuantos mayores de edad( más de 17) estan solteros
 c) La cantidad de Mujeres que hay solteras o viudas.
 d) cuantas personas de la tercera edad( mas de 60 años) , tienen mas de 38 de temperatura
 e) El promedio de edad entre las mujeres casadas.*/
-function mostrar()
+/*function mostrar()
 {
 	let	nombreIngresado;
 	let edadIngresada;
@@ -117,4 +117,100 @@ function mostrar()
 	document.write("las personas de la tercera edad y con mas de 38 grados son " + contadorTerceraEdadYtemperatura + "<br>" );
 	document.write("el promedio de edad de las mujeres casadas es de: " + promedioDeEdadMujeresCasadas +"<br>");
 
+}*/
+//Recu 2020 3 bis: 
+/*Vacaciones en Familia" 
+Nos ingresan una cantidad indeterminada de estadías de vacaciones, 
+validando los datos ingresados:
+nombre del pasajero titular, 
+destino( “Brasil”, “Caribe” o “Europa”), 
+temporada(“alta”,”baja”,“media”),
+cantidad de pasajeros que viajan.
+Informar:
+a)El destino más elegido.
+b)El nombre del pasajero titular que lleva menos pasajeros.
+c)El promedio de personas, que viajan en temporada alta.
+d)El total de personas que viajaron a Europa.
+*/
+
+function mostrar()
+{
+	let nombeDelPasajeroTitular;
+	let respuesta;
+	let destinoIngresado;
+	let temporada;
+	let cantitdadDePasajerosQueViajan;
+	let banderaDestinoMasElegido;
+	let cantidadDestinoMasElegido;
+	let nombreDestinoMasElegido;
+	let banderaNombrePasajeroTitularConMenosPasajeros;
+	let cantidadDelTitularConMenosPasajeros;
+	let nombrePasajeroTitularConMenosPasajeros;
+	let acumuladorDePersonasqueViajanEnAlta;
+	let promedioDePersonasqueViajanEnAlta;
+	let acumuladorDePersonasQueViajan;
+	let acumuladorDePersonasEuropa;
+	
+	banderaDestinoMasElegido=true;
+	banderaNombrePasajeroTitularConMenosPasajeros=true;
+	acumuladorDePersonasqueViajanEnAlta = 0;
+	acumuladorDePersonasQueViajan=0;
+	acumuladorDePersonasEuropa= 0;
+	respuesta="si";
+
+	while(respuesta=="si")
+	{
+		nombeDelPasajeroTitular=prompt("ingresa el nombre del pasajero titular");
+		destinoIngresado=prompt("ingresa el destino (“Brasil”, “Caribe” o “Europa”)");
+		while(destinoIngresado!= "Brasil" && destinoIngresado!="Caribe" && destinoIngresado!= "Europa")
+		{
+			destinoIngresado=prompt("erro, ingresa el destino valido (“Brasil”, “Caribe” o “Europa”)");
+		}
+		temporada=prompt("ingresa la temporada (“alta”,”baja”,“media”)");
+		while(temporada!= "alta" && temporada!="baja" && temporada!= "media")
+		{
+			temporada=prompt("ingresa la temporada (“alta”,”baja”,“media”)");		
+		}
+		cantitdadDePasajerosQueViajan= parseInt(prompt("ingresa la cantidad de pasajeros (no puede ser mayor a 220 personas)"));
+		while(isNaN(cantitdadDePasajerosQueViajan)|| cantitdadDePasajerosQueViajan < 1 || cantitdadDePasajerosQueViajan > 250)
+		{
+			cantitdadDePasajerosQueViajan= parseInt(prompt("error, ingresa la cantidad de pasajeros valida (no puede ser mayor a 220 personas)"));
+		}
+		acumuladorDePersonasQueViajan= acumuladorDePersonasQueViajan + cantitdadDePasajerosQueViajan;
+		
+		if(banderaDestinoMasElegido==true || cantidadDestinoMasElegido < cantitdadDePasajerosQueViajan )
+		{
+			cantidadDestinoMasElegido= cantitdadDePasajerosQueViajan;
+			nombreDestinoMasElegido= destinoIngresado;
+			banderaDestinoMasElegido=false;
+		}
+		if(banderaNombrePasajeroTitularConMenosPasajeros==true || cantidadDelTitularConMenosPasajeros > cantitdadDePasajerosQueViajan)
+		{
+			cantidadDelTitularConMenosPasajeros= cantitdadDePasajerosQueViajan;
+			nombrePasajeroTitularConMenosPasajeros = nombeDelPasajeroTitular;
+			banderaNombrePasajeroTitularConMenosPasajeros= true;
+		}
+		
+		switch(temporada)
+		{
+			case "alta":
+				acumuladorDePersonasqueViajanEnAlta= acumuladorDePersonasqueViajanEnAlta + cantitdadDePasajerosQueViajan
+				break;
+		} 
+		if(destinoIngresado== "Europa")
+		{
+			acumuladorDePersonasEuropa= acumuladorDePersonasEuropa+ cantitdadDePasajerosQueViajan;
+		}
+
+		respuesta=prompt("¿Desea realizar otro ingreso? 'si'/ 'no'");
+
+	}/// fin del while
+
+	promedioDePersonasqueViajanEnAlta= acumuladorDePersonasqueViajanEnAlta/ acumuladorDePersonasQueViajan *100;
+
+	document.write("El destino más elegido es "+ nombreDestinoMasElegido+"<br>");
+	document.write("El nombre del pasajero titular que lleva menos pasajeros es "+nombrePasajeroTitularConMenosPasajeros+"<br>");
+	document.write("El promedio de personas, que viajan en temporada alta "+ promedioDePersonasqueViajanEnAlta +"% <br>");
+	document.write("El total de personas que viajaron a Europa es de: "+acumuladorDePersonasEuropa+"<br>");
 }
+

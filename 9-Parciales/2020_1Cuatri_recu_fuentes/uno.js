@@ -10,6 +10,7 @@ b) Del tipo de producto con más unidades en total de la compra, el promedio por
 c) Cuántas unidades de Barbijos se compraron en total
 formigathiago
  */
+/*
 function mostrar()
 {
 	
@@ -107,4 +108,96 @@ function mostrar()
 	document.write("el  tipo de producto con mas unidades es " + mayorProductos +" y su promedio de compra es de: " + promedio+ "<br>" );
 	document.write( "se compraron en total " + acumuladorBarbijo + " unidades de barbijo" + "<br>");
 
+}*/
+
+
+/* Recu 2020 1 bis: "Jugando al Doctor" 
+De 7 personas que ingresan al hospital se deben tomar y validar los siguientes datos:
+nombre, altura, peso y sexo.
+a)Informar la cantidad de personas de sexo femenino. 
+b)La altura promedio en total de pacientes.
+c)El nombre del hombre con menos peso(si lo hay).
+d)De la persona no binaria, el más flaco. 
+Pedir datos por prompt y mostrar por document.write o console.log*/
+
+function mostrar()
+{
+	let nombreIngresado;
+	let alturaIgresada;
+	let pesoIngresado;
+	let sexoIngresado;
+	let contadorPacientesFemeninas;
+	let acumuladorAlturaPacientes;
+	let contadorAlturaPacientes;
+	let promedioAltura;
+	let banderaHombreConMenosPeso;
+	let nombreDelHombreConMenosPeso;
+	let pesoHombreConMenosPeso;
+	let banderaPersonaNoBinariaMasFlaca;
+	let nombrePersonaNoBinariaMasFlaca;
+	let pesoPersonaNoBinariaMasFlaca;
+
+	contadorPacientesFemeninas=0;
+	contadorAlturaPacientes=0;
+	acumuladorAlturaPacientes=0;
+	banderaHombreConMenosPeso= true;
+	banderaPersonaNoBinariaMasFlaca= true;
+
+	for(let i= 0;	i < 7;	i++)
+	{		
+		nombreIngresado= prompt("ingresa un nombre");
+		alturaIgresada= parseFloat(prompt("ingresa su altura(entre 0.50 y 2.10)"));
+		while(isNaN(alturaIgresada)|| alturaIgresada < 0.50 || alturaIgresada > 2.10)
+		{
+			alturaIgresada= parseFloat(prompt("error, ingresa una altura valida(entre 0.50 y 2.10)"));
+		}
+		acumuladorAlturaPacientes=acumuladorAlturaPacientes+ alturaIgresada;
+		contadorAlturaPacientes= contadorAlturaPacientes +1; 
+		pesoIngresado=parseFloat(prompt("ingresa su peso(entre 3kg y 150 kg)"));
+		while(isNaN(pesoIngresado)|| pesoIngresado < 3 || pesoIngresado > 150)
+		{
+			pesoIngresado=parseFloat(prompt("error, ingresa un peso valido(entre 3kg y 150 kg)"));
+		}
+		sexoIngresado= prompt("ingresa su sexo('m'para masculino, 'f'para femenino y b para no binario )");
+		while(sexoIngresado!='m' && sexoIngresado != 'f' && sexoIngresado!= 'b')
+		{
+			sexoIngresado= prompt("error, ingresa un sexo valido('m'para masculino, 'f'para femenino y b para no binario )");
+		}
+
+		switch(sexoIngresado)
+		{
+			case 'm':
+				if(banderaHombreConMenosPeso==true|| pesoHombreConMenosPeso > pesoIngresado)
+				{
+					pesoHombreConMenosPeso= pesoIngresado;
+					nombreDelHombreConMenosPeso =nombreIngresado;
+					banderaHombreConMenosPeso= false;
+				}
+				break;
+			case 'f':
+				contadorPacientesFemeninas = contadorPacientesFemeninas+1;
+				break;
+			case 'b':
+				if(banderaPersonaNoBinariaMasFlaca==true || pesoPersonaNoBinariaMasFlaca > pesoIngresado)
+				{
+					pesoPersonaNoBinariaMasFlaca= pesoIngresado;
+					nombrePersonaNoBinariaMasFlaca= nombreIngresado;
+					banderaPersonaNoBinariaMasFlaca=false;
+				}
+				break;
+		}
+	}// fin del for principal
+
+	promedioAltura= acumuladorAlturaPacientes/ contadorAlturaPacientes;
+
+	document.write("la cantidad de personas de sexo femenino son "+ contadorPacientesFemeninas+"<br>");
+	document.write("La altura promedio en total de pacientes es "+ promedioAltura +"<br>");
+	document.write("El nombre del hombre con menos peso es "+ nombreDelHombreConMenosPeso+"<br>");
+	document.write("El mas flaco de las personas no binarias es "+ nombrePersonaNoBinariaMasFlaca+"<br>");
+	
+/*a)Informar la cantidad de personas de sexo femenino. 
+b)La altura promedio en total de pacientes.
+c)El nombre del hombre con menos peso(si lo hay).
+d)De la persona no binaria, el más flaco. 
+Pedir datos por prompt y mostrar por document.write o console.log*/ 
 }
